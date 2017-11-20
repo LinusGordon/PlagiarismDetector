@@ -23,7 +23,6 @@ def main():
     synonyms = parser.synonyms
     tuple_size = parser.tuple_size
 
-    PlagiarismDetector(files, synonyms, tuple_size)
     print(PlagiarismDetector(files, synonyms, tuple_size).get_percent_plagiarised())
 
 
