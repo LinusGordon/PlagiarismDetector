@@ -13,21 +13,15 @@ def main():
 
     parser.add_argument('-s', '--synonyms', required=True, help='Synonyms file',)
 
-    parser.add_argument(
-        '-t', '--tuple_size', type=int, help='Size of the tuple',
-        default=PlagiarismDetector.DEFAULT_TUPLE_SIZE,
-    )
+    parser.add_argument('-t', '--tuple_size', type=int, help='Size of the tuple',
+                        default=PlagiarismDetector.DEFAULT_TUPLE_SIZE,)
 
     parser = parser.parse_args()
 
-    print(
-        PlagiarismDetector(
-            parser.files,
-            parser.synonyms,
-            parser.tuple_size
-        ).get_percentage_plagiarized()
-    )
-
+    print(PlagiarismDetector(parser.files,
+                             parser.synonyms,
+                             parser.tuple_size).get_percentage_plagiarized(),
+          )
 
 if __name__ == '__main__':
     main()
