@@ -23,9 +23,6 @@ class PlagiarismDetector:
         self.original = self.__convert_to_tuples(files[0])
         self.possible_plagiarism = self.__convert_to_tuples(files[1])
 
-        print(self.original)
-        print(self.possible_plagiarism)
-
     def __file_to_list(self, file):
         """
         Converts a file to a list containing its words.
