@@ -1,2 +1,1 @@
 run sprint jog
-gooo go
