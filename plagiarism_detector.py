@@ -22,7 +22,7 @@ class PlagiarismDetector:
         self.synonyms = self.__file_to_dict(synonyms)
         self.original = self.__convert_to_tuples(files[0], False)
         self.possible_plagiarism = self.__convert_to_tuples(files[1], True)
-
+ßß
     def __file_to_list(self, file):
         """
         Converts a file to a list containing its words.
@@ -72,7 +72,7 @@ class PlagiarismDetector:
             if synonymize:
                 if words[i] in self.synonyms:
                     words[i] = self.synonyms[word]
-            words[i] = word.lower().translate(str.maketrans('', '', string.punctuation))
+            words[i] = words[i].lower().translate(str.maketrans('', '', string.punctuation))
 
         return [tuple(words[i:i + self.tuple_size]) for i in range(len(words) - self.tuple_size + 1)]  # noqa
 
